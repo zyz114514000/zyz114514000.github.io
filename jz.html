@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>捐赠站点收银台</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f2f2f2;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    input[type="number"], input[type="text"], select {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>捐赠收银台</h2>
+        <form id="donationForm">
+            <label for="amount">捐赠金额:</label>
+            <input type="number" id="amount" name="amount" min="1" step="1" required><br>
+
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">电子邮件:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">留言 (可选):</label>
+            <textarea id="message" name="message" rows="4"></textarea><br>
+
+            <button type="submit" onclick="submitDonation()">确认捐赠</button>
+        </form>
+        <p id="confirmationMessage"></p>
+    </div>
+
+    <script>
+        function submitDonation() {
+            // 模拟提交捐赠表单的函数
+            var form = document.getElementById('donationForm');
+            var formData = new FormData(form);
+
+            // 这里可以添加实际的捐赠处理逻辑，比如向服务器发送请求或调用支付接口
+            // 此处仅模拟成功提交的消息显示
+            document.getElementById('confirmationMessage').textContent = '捐赠提交成功！谢谢您的支持。';
+            form.reset(); // 清空表单
+        }
+    </script>
+</body>
+</html>
