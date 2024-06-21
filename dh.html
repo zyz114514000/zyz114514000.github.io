@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>兑换码验证系统</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+    }
+    input {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    #result {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <h2>兑换码验证系统</h2>
+    <input type="text" id="code" placeholder="请输入兑换码"><br>
+    <button onclick="validateCode()">验证</button>
+    <p id="result"></p>
+
+    <script>
+        // 假设这是有效的兑换码列表，实际情况中应该从安全的地方获取
+        var validCodes = ['1', '2', '3'];
+
+        function validateCode() {
+            var inputCode = document.getElementById('code').value.trim();
+            var isValid = validCodes.includes(inputCode);
+
+            if (isValid) {
+                // 兑换码验证成功，跳转到另一个页面
+                window.location.href = 'ggl.html';
+            } else {
+                // 显示验证结果
+                var resultElement = document.getElementById('result');
+                resultElement.style.color = 'red';
+                resultElement.textContent = '兑换码无效，请重新输入。';
+            }
+        }
+    </script>
+</body>
+</html>
