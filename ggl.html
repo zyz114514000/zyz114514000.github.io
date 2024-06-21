@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			#box {
+				position: relative;
+				width: 300px;
+				height: 300px;
+				border: 1px solid red;
+				margin: 0 auto;
+				box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+			}
+			
+			#box div {
+				position: absolute;
+				width: 98px;
+				height: 98px;
+				line-height: 98px;
+				border: 1px solid red;
+				font-size: 25px;
+				text-align: center;
+			}
+			
+			#box div:nth-child(2) {
+				left: 100px;
+			}
+			#box div:nth-child(3) {
+				left: 200px;
+			}
+			#box div:nth-child(4) {
+				left: 200px;
+				top: 100px;
+			}
+			#box div:nth-child(5) {
+				left: 200px;
+				top: 200px;
+			}
+			#box div:nth-child(6) {
+				left: 100px;
+				top: 200px;
+			}
+			#box div:nth-child(7) {
+				top: 200px;
+			}
+			#box div:nth-child(8) {
+				top: 100px;
+			}
+			
+			#box input {
+				position: absolute;
+				width: 98px;
+				height: 98px;
+				/* border: 1px solid blue; */
+				left: 101px;
+				top: 101px;
+			}
+			
+			.toRed {
+				background-color: red;
+			}
+			
+			h2 {
+				text-align: center;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="box">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<input type="button" id="startBtn" value="开始">
+		</div>
+		
+		<h2></h2>
+	</body>
+	
+	<script type="text/javascript">
+		var box = document.getElementById("box");
+		var allDiv = box.getElementsByTagName("div");
+		var startBtn = document.getElementById("startBtn");
+		var score = document.getElementsByTagName("h2")[0];
+		
+		// 表示定时器是否在运行
+		var flag = false;
+		
+		startBtn.onclick = function() {
+			// 如果定时器在运行则不能进行下次抽奖
+			if (flag) return;
+			
+			// 定时器开始运行
+			flag = true
+			
+			// 生成 17~32 的随机数，中奖编号为 idx%8? idx%8: 8
+			// 保证转盘至少转两圈不超过四圈
+			var idx = Math.ceil(Math.random() * 16) + 16;
+			
+			var k = 0;
+			var timer = setInterval(function() {
+				for (var i = 0; i < allDiv.length; i++) {
+					allDiv[i].className = ";"
+				}
+				allDiv[k%8].className = "toRed";
+				if (k == idx-1) { 
+					// 抽奖结束，清除定时器
+					clearTimeout(timer);
+					//标记定时器不在运行
+					flag = false;
+					
+					// 中奖信息
+					score.innerText = "恭喜您中了" + (idx%8? idx%8: 8) + "等奖，请到—兑换";
+				}
+				k++;
+			}, 100)
+		}
+	</script>
+</html>
