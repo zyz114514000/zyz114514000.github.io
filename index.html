@@ -1,131 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Five Mountain - Official Website</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f2f2f2;
-    }
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-    }
-    nav {
-        background-color: #444;
-        padding: 10px;
-        text-align: center;
-    }
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 20px;
-        margin: 0 10px;
-    }
-    nav a:hover {
-        background-color: #555;
-    }
-    .content {
-        padding: 40px;
-        text-align: center;
-    }
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-    }
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-gap: 20px;
-        padding: 20px;
-    }
-    .grid-item {
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .grid-item h2 {
-        color: #333;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你好，陌生人</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 这里引入你的CSS文件 -->
 </head>
 <body>
-    <header>
-        <h1>欢迎来到五根山官网</h1>
-    </header>
-    
-    <nav>
-        <a href="jz.html">捐赠</a>
-        <a href="#services">服务</a>
-        <a href="dh.html">兑换</a>
-        <a href="join.html">关于</a>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">五根山</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="learn.html">学术论坛</a></li>
+                <li><a href="dh.html">兑换</a></li>
+            </ul>
+        </div>
     </nav>
-    
-    <div class="content" id="home">
-        <h2>Welcome to Five Mountain!</h2>
-        <p>拥有最好的公益项目，并自掏腰包的维持</p>
-    </div>
-    
-    <div class="content" id="services">
-        <div class="grid-container">
-            <div class="grid-item">
-                <h2>我们的服务</h2>
-                <p>为英语知识点做公益.</p>
-            </div>
-            <div class="grid-item">
-                <h2>先进的技术</h2>
-                <p> 完美的线上兑换制度.</p>
-            </div>
+
+    <!-- 主页内容 -->
+    <section class="hero">
+        <div class="container">
+            <h1>欢迎来到五根山官网</h1>
+            <p>welcome to Five Mountain</p>
+            <a href="jz.html" class="btn">捐赠我们</a>
         </div>
-    </div>
-    
-    <div class="content" id="tours">
-        <div class="grid-container">
-            <div class="grid-item">
-                <h2>我们宗旨</h2>
-                <p>奖励我们认为值得奖励的人.</p>
+    </section>
+
+    <!-- 其他内容区域 -->
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <img src="feature1.jpg" alt="Feature 1">
+                <h2>学术论坛</h2>
+                <p></p>
             </div>
-            <div class="grid-item">
-                <h2>联系方式</h2>
-                <p>微信:zyz114514000
-QQ:20358462.</p>
+            <div class="feature">
+                <img src="feature2.jpg" alt="Feature 2">
+                <h2>兑换</h2>
+                <p></p>
             </div>
+            <!-- 可根据需要添加更多特色项目 -->
         </div>
-    </div>
-    
-    <div cla="conte
- id="c
->
-        <div cl="grid
->
-            <di class="
->
-                <h2>Contact Us</h2>
-                <p>Get in touch with us for inquiries, bookings, or any questions you may have.</p>
-            </div>
-            <div class="gri
->
-                <h2>Join Our Team</h2>
-                <p>Explore career opportunities with Mountain Ventures.</p>
-            </div>
+    </section>
+
+    <!-- 脚注 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 赵晏增. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">使用条款</a></li>
+            </ul>
         </div>
-    </div>
-    
-    <foote>
-        <p>&copy; 2024 Mountain Ventures. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
-
-
-
-
