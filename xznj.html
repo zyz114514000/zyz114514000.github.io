@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>选择年级</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 偏上对齐 */
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px; /* 上方间距 */
+  }
+  .button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button-container a:nth-child(5) {
+    background-color: red;
+  }
+  .button-container a:not(:nth-child(5)) {
+    background-color: blue;
+  }
+</style>
+</head>
+<body>
+  <div class="button-container">
+    <a href="a.html">七年级上册</a>
+    <a href="page2.html">七年级下册</a>
+    <a href="page3.html">八年级上册</a>
+    <a href="page4.html">八年级下册</a>
+    <a href="page5.html">返回</a>
+  </div>
+</body>
+</html>
