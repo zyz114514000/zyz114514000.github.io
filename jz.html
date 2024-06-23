@@ -3,84 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>捐赠站点收银台</title>
+<title>     捐赠项目     </title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-        background-color: #f2f2f2;
-    }
-    .container {
-        max-width: 600px;
-        margin: 0 auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-        text-align: center;
-        color: #333;
-    }
-    label {
-        display: block;
-        margin-bottom: 8px;
-    }
-    input[type="number"], input[type="text"], select {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-    }
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    button:hover {
-        background-color: #45a049;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('hero.jpg'); /* 背景图片的URL */
+    background-size: cover; /* 确保背景图片铺满整个屏幕 */
+    background-position: center; /* 居中显示背景图片 */
+  }
+  
+  .glass-pane {
+    background-color: rgba(255, 255, 255, 0.8); /* 磨砂玻璃效果 */
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  .button {
+    padding: 15px 30px;
+    background-color: #007bff; /* 按钮背景色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3; /* 按钮鼠标悬停时背景色 */
+  }
 </style>
 </head>
 <body>
-    <div class="container">
-        <h2>捐赠收银台</h2>
-        <form id="donationForm">
-            <label for="amount">捐赠金额:</label>
-            <input type="number" id="amount" name="amount" min="1" step="1" required><br>
+  <div class="glass-pane">
+    <h2>捐赠项目</h2>
+    <form id="donationForm">
+      <input type="radio" id="option1" name="donationAmount" value="1">
+      <label for="option1">1 元</label><br>
+      <input type="radio" id="option2" name="donationAmount" value="5">
+      <label for="option2">5 元</label><br>
+      <input type="radio" id="option3" name="donationAmount" value="10">
+      <label for="option3">10 元</label><br>
+      <input type="radio" id="option4" name="donationAmount" value="custom">
+      <label for="option4">自定义</label><br>
+      <input type="submit" class="button" value="确定">
+    </form>
+  </div>
 
-            <label for="name">姓名:</label>
-            <input type="text" id="name" name="name" required><br>
-
-            <label for="email">电子邮件:</label>
-            <input type="email" id="email" name="email" required><br>
-
-            <label for="message">留言 (可选):</label>
-            <textarea id="message" name="message" rows="4"></textarea><br>
-
-            <button type="submit" onclick="submitDonation()">确认捐赠</button>
-        </form>
-        <p id="confirmationMessage"></p>
-    </div>
-
-    <script>
-        function submitDonation() {
-            // 模拟提交捐赠表单的函数
-            var form = document.getElementById('donationForm');
-            var formData = new FormData(form);
-
-            // 这里可以添加实际的捐赠处理逻辑，比如向服务器发送请求或调用支付接口
-            // 此处仅模拟成功提交的消息显示
-            document.getElementById('confirmationMessage').textContent = '捐赠提交成功！谢谢您的支持。';
-            form.reset(); // 清空表单
-        }
-    </script>
+  <script>
+    document.getElementById('donationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      var donationAmount = document.querySelector('input[name="donationAmount"]:checked').value;
+      
+      switch (donationAmount) {
+        case '1':
+          window.location.href = '1r.html';
+          break;
+        case '5':
+          window.location.href = '5r.html';
+          break;
+        case '10':
+          window.location.href = '10r.html';
+          break;
+        case 'custom':
+          window.location.href = 'mr.html';
+          break;
+        default:
+          alert('请选择一个选项');
+          break;
+      }
+    });
+  </script>
 </body>
 </html>
