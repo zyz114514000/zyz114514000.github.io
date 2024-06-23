@@ -8,32 +8,86 @@
   body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     background-color: #f0f0f0;
-    position: relative; /* Added */
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* Enable vertical scrolling for the body */
+  }
+  .container {
+    width: 100%;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 20px auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Arrange containers in a column */
   }
   .image-container {
-    max-width: 100%;
-    max-height: 100%;
-    overflow: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow from container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   .image-container img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    vertical-align: middle;
   }
   .button-container {
-    position: absolute;
+    text-align: center;
+    margin-top: 10px;
+    position: fixed;
     top: 10px;
     right: 10px;
-    display: flex;
-    gap: 10px;
+    z-index: 100; /* Ensure button container stays on top */
   }
   .button-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-container">
+      <img src="d21.jpg" alt="超长截图">
+    </div>
+    <div class="image-container">
+      <img src="d21a.jpg" alt="另一张图片">
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button onclick="toggleFullscreen()">全屏显示</button>
+    <button onclick="goBack()">返回</button>
+  </div>
+
+  <script>
+    function toggleFullscreen() {
+      var elem = document.documentElement;
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    function goBack() {
+      history.back();
+    }
+  </script>
+</body>
+</html>
+
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
