@@ -1,0 +1,1320 @@
+<!--这个模版来自[最好模版-http://BestMoban.Com],需要更多模版请访问http://BestMoban.Com-->
+<script language="JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function YY_checkform() { //v4.66
+//copyright (c)1998,2002 Yaromat.com
+  var args = YY_checkform.arguments; var myDot=true; var myV=''; var myErr='';var addErr=false;var myReq;
+  for (var i=1; i<args.length;i=i+4){
+    if (args[i+1].charAt(0)=='#'){myReq=true; args[i+1]=args[i+1].substring(1);}else{myReq=false}
+    var myObj = MM_findObj(args[i].replace(/\[\d+\]/ig,""));
+    myV=myObj.value;
+    if (myObj.type=='text'||myObj.type=='password'||myObj.type=='hidden'){
+      if (myReq&&myObj.value.length==0){addErr=true}
+      if ((myV.length>0)&&(args[i+2]==1)){ //fromto
+        var myMa=args[i+1].split('_');if(isNaN(myV)||myV<myMa[0]/1||myV > myMa[1]/1){addErr=true}
+      } else if ((myV.length>0)&&(args[i+2]==2)){
+          var rx=new RegExp("^[\\w\.=-]+@[\\w\\.-]+\\.[a-z]{2,4}$");if(!rx.test(myV))addErr=true;
+      } else if ((myV.length>0)&&(args[i+2]==3)){ // date
+        var myMa=args[i+1].split("#"); var myAt=myV.match(myMa[0]);
+        if(myAt){
+          var myD=(myAt[myMa[1]])?myAt[myMa[1]]:1; var myM=myAt[myMa[2]]-1; var myY=myAt[myMa[3]];
+          var myDate=new Date(myY,myM,myD);
+          if(myDate.getFullYear()!=myY||myDate.getDate()!=myD||myDate.getMonth()!=myM){addErr=true};
+        }else{addErr=true}
+      } else if ((myV.length>0)&&(args[i+2]==4)){ // time
+        var myMa=args[i+1].split("#"); var myAt=myV.match(myMa[0]);if(!myAt){addErr=true}
+      } else if (myV.length>0&&args[i+2]==5){ // check this 2
+            var myObj1 = MM_findObj(args[i+1].replace(/\[\d+\]/ig,""));
+            if(myObj1.length)myObj1=myObj1[args[i+1].replace(/(.*\[)|(\].*)/ig,"")];
+            if(!myObj1.checked){addErr=true}
+      } else if (myV.length>0&&args[i+2]==6){ // the same
+            var myObj1 = MM_findObj(args[i+1]);
+            if(myV!=myObj1.value){addErr=true}
+      }
+    } else
+    if (!myObj.type&&myObj.length>0&&myObj[0].type=='radio'){
+          var myTest = args[i].match(/(.*)\[(\d+)\].*/i);
+          var myObj1=(myObj.length>1)?myObj[myTest[2]]:myObj;
+      if (args[i+2]==1&&myObj1&&myObj1.checked&&MM_findObj(args[i+1]).value.length/1==0){addErr=true}
+      if (args[i+2]==2){
+        var myDot=false;
+        for(var j=0;j<myObj.length;j++){myDot=myDot||myObj[j].checked}
+        if(!myDot){myErr+='* ' +args[i+3]+'\n'}
+      }
+    } else if (myObj.type=='checkbox'){
+      if(args[i+2]==1&&myObj.checked==false){addErr=true}
+      if(args[i+2]==2&&myObj.checked&&MM_findObj(args[i+1]).value.length/1==0){addErr=true}
+    } else if (myObj.type=='select-one'||myObj.type=='select-multiple'){
+      if(args[i+2]==1&&myObj.selectedIndex/1==0){addErr=true}
+    }else if (myObj.type=='textarea'){
+      if(myV.length<args[i+1]){addErr=true}
+    }
+    if (addErr){myErr+='* '+args[i+3]+'\n'; addErr=false}
+  }
+  if (myErr!=''){alert('错误:\t\t\t\t\t\n\n'+myErr)}
+  document.MM_returnValue = (myErr=='');
+}
+//-->
+</script>
+<html>
+<title> 
+行远科技 - Professional Systeam Development,Website Design And Flash Development
+</title>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+<table width="750" border="0" cellspacing="1" cellpadding="0" align="center" bgcolor="#777777">
+    <tr>
+      <td>
+
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table align="center" border="0" cellpadding="0" cellspacing=0 width="750">
+  <tbody>
+    <tr> 
+      <td width="100%">
+      <img border="0" src="images/title.jpg" width="750" height="123"></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Left-Block -->
+
+            <table background="images/_menu_left_shadow.gif" width="100%" border="0" cellspacing="0" cellpadding="2" align="center" bgcolor="#FFFFFF">
+          <tr> 
+          <td bgcolor="#4D87D6" valign="top" width="746"> 
+            <table width="180" cellpadding=2 cellspacing=1 border=0>
+                <tr> 
+                  <td bgcolor="#4D87D6">
+				  <div align="left"> 
+
+<script language="JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function YY_checkform() { //v4.66
+//copyright (c)1998,2002 Yaromat.com
+  var args = YY_checkform.arguments; var myDot=true; var myV=''; var myErr='';var addErr=false;var myReq;
+  for (var i=1; i<args.length;i=i+4){
+    if (args[i+1].charAt(0)=='#'){myReq=true; args[i+1]=args[i+1].substring(1);}else{myReq=false}
+    var myObj = MM_findObj(args[i].replace(/\[\d+\]/ig,""));
+    myV=myObj.value;
+    if (myObj.type=='text'||myObj.type=='password'||myObj.type=='hidden'){
+      if (myReq&&myObj.value.length==0){addErr=true}
+      if ((myV.length>0)&&(args[i+2]==1)){ //fromto
+        var myMa=args[i+1].split('_');if(isNaN(myV)||myV<myMa[0]/1||myV > myMa[1]/1){addErr=true}
+      } else if ((myV.length>0)&&(args[i+2]==2)){
+          var rx=new RegExp("^[\\w\.=-]+@[\\w\\.-]+\\.[a-z]{2,4}$");if(!rx.test(myV))addErr=true;
+      } else if ((myV.length>0)&&(args[i+2]==3)){ // date
+        var myMa=args[i+1].split("#"); var myAt=myV.match(myMa[0]);
+        if(myAt){
+          var myD=(myAt[myMa[1]])?myAt[myMa[1]]:1; var myM=myAt[myMa[2]]-1; var myY=myAt[myMa[3]];
+          var myDate=new Date(myY,myM,myD);
+          if(myDate.getFullYear()!=myY||myDate.getDate()!=myD||myDate.getMonth()!=myM){addErr=true};
+        }else{addErr=true}
+      } else if ((myV.length>0)&&(args[i+2]==4)){ // time
+        var myMa=args[i+1].split("#"); var myAt=myV.match(myMa[0]);if(!myAt){addErr=true}
+      } else if (myV.length>0&&args[i+2]==5){ // check this 2
+            var myObj1 = MM_findObj(args[i+1].replace(/\[\d+\]/ig,""));
+            if(myObj1.length)myObj1=myObj1[args[i+1].replace(/(.*\[)|(\].*)/ig,"")];
+            if(!myObj1.checked){addErr=true}
+      } else if (myV.length>0&&args[i+2]==6){ // the same
+            var myObj1 = MM_findObj(args[i+1]);
+            if(myV!=myObj1.value){addErr=true}
+      }
+    } else
+    if (!myObj.type&&myObj.length>0&&myObj[0].type=='radio'){
+          var myTest = args[i].match(/(.*)\[(\d+)\].*/i);
+          var myObj1=(myObj.length>1)?myObj[myTest[2]]:myObj;
+      if (args[i+2]==1&&myObj1&&myObj1.checked&&MM_findObj(args[i+1]).value.length/1==0){addErr=true}
+      if (args[i+2]==2){
+        var myDot=false;
+        for(var j=0;j<myObj.length;j++){myDot=myDot||myObj[j].checked}
+        if(!myDot){myErr+='* ' +args[i+3]+'\n'}
+      }
+    } else if (myObj.type=='checkbox'){
+      if(args[i+2]==1&&myObj.checked==false){addErr=true}
+      if(args[i+2]==2&&myObj.checked&&MM_findObj(args[i+1]).value.length/1==0){addErr=true}
+    } else if (myObj.type=='select-one'||myObj.type=='select-multiple'){
+      if(args[i+2]==1&&myObj.selectedIndex/1==0){addErr=true}
+    }else if (myObj.type=='textarea'){
+      if(myV.length<args[i+1]){addErr=true}
+    }
+    if (addErr){myErr+='* '+args[i+3]+'\n'; addErr=false}
+  }
+  if (myErr!=''){alert('错误:\t\t\t\t\t\n\n'+myErr)}
+  document.MM_returnValue = (myErr=='');
+}
+//-->
+                    </script>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+<style type="text/css">
+body {  }
+body.menu  { background:#383757; margin:0px; font-family:"Arial", "Helvetica", "sans-serif";  font-size:8pt; }
+table.menu  { border:0px; font-family:"Arial", "Helvetica", "sans-serif";  font-size:8pt; }
+td.menu  { font-family:"Arial", "Helvetica", "sans-serif";  font-size:8pt; }
+img.menu  { vertical-align:bottom; border:0px; }
+a.menu  { font-family:"Arial", "Helvetica", "sans-serif";  font-size:8pt; color:#215DC6; text-decoration:none; }
+a:hover.menu  { font-size:8pt;color:#428EFF;font-family:"Arial", "Helvetica", "sans-serif";  }
+.sec_menu  { border-left:1px solid gray; border-right:1px solid gray; border-bottom:1px solid gray; overflow:hidden; background:#f8f8f8; }
+.menu_title  {font-family:"Arial", "Helvetica", "sans-serif";  font-size:8pt }
+.menu_title span  { position:relative; top:2px; left:8px; color:#494949; font-weight:bold;font-family:"Arial", "Helvetica", "sans-serif"; font-size:8pt}
+.menu_title2  {font-family:"Arial", "Helvetica", "sans-serif";  font-size:8pt }
+.menu_title2 span  { position:relative; top:2px; left:8px; color:#428EFF; font-weight:bold; cursor:hand;font-family:"Arial", "Helvetica", "sans-serif";  font-size:8pt}
+                    </style>
+
+<script language="JavaScript">
+function newWindow(mypage,myname,w,h,features) {
+  if(screen.width){
+  var winl = (screen.width-w)/2;
+  var wint = (screen.height-h)/2;
+  }else{winl = 0;wint =0;}
+  if (winl < 0) winl = 0;
+  if (wint < 0) wint = 0;
+  var settings = 'height=' + h + ',';
+  settings += 'width=' + w + ',';
+  settings += 'top=' + wint + ',';
+  settings += 'left=' + winl + ',';
+  settings += features;
+  win = window.open(mypage,myname,settings);
+  win.window.focus();
+}
+                    </script>
+
+<script language="JavaScript">
+<!-- Hide the script from old browsers --
+// Michael P. Scholtis (mpscho@planetx.bloomu.edu)
+// All rights reserved.  December 22, 1995
+// You may use this JavaScript example as you see fit, as long as the
+// information within this comment above is included in your script.
+function browsertest () 
+        {document.write("Javascript 已激活")}
+// --End Hiding Here -->
+                    </script>
+<script src="plugins.js">
+
+//Detect Plugin (Flash, Java, RealPlayer etc) script- By Frederic (fw4@tvd.be)
+//Visit http://javascriptkit.com for this script and more
+
+//SAMPLE USAGE- detect "Flash"
+//if (pluginlist.indexOf("Flash")!=-1)
+//document.write("You have Flash installed.")
+                    </script>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+                    </script>
+
+<script>
+function openit(){
+var which="lost/lost.htm"
+whichit=window.open(which,"","width=400,height=125")
+}
+                    </script>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+-->
+                    </script>
+
+
+
+<body  onLoad="MM_preloadImages('images/pro_1_on.gif','images/pro_2_on.gif','images/pro_3_on.gif','images/pro_4_on.gif')">
+<table align=center cellpadding=0 cellspacing=0>
+<tr>
+<td bgcolor="#4D87D6" valign=top>
+<table cellpadding=0 cellspacing=0 width=158 align=center class="menu">
+  <tr style="cursor:hand;"> 
+    <td height=25 class=menu_title background=xpmenu/title_bg_hide.gif id=menuTitle1 class="menu"> 
+      <span>产品列表</span> </td>
+  </tr>
+  <tr> 
+    <td> <div class=sec_menu id=menu1> 
+        <table cellpadding=0 cellspacing=0 align=center width=135 style="position:relative;top:11px;">
+
+          <tr> 
+            <td height=20><img src=xpmenu/project2.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 
+            <a href="#" target="mainFrame">I-Office 网络办公</a>
+		    
+			</td>
+          </tr>
+
+          <tr> 
+            <td height=20><img src=xpmenu/project2.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 
+            <a href="#" target="mainFrame">I-Office 网络办公</a>
+		    
+			</td>
+          </tr>
+
+          <tr> 
+            <td height=20><img src=xpmenu/project2.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 
+            <a href="#" target="mainFrame">I-Office 网络办公</a>
+		    
+			</td>
+          </tr>
+
+          <tr> 
+            <td height=20><img src=xpmenu/project2.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 
+            <a href="#" target="mainFrame">I-Office 网络办公</a>
+		    
+			</td>
+          </tr>
+
+          <tr> 
+            <td height=20><img src=xpmenu/project2.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 
+            <a href="#" target="mainFrame">I-Office 网络办公</a>
+		    
+			</td>
+          </tr>
+
+		  <tr> 
+            <td height=20><img src=xpmenu/favorites.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 更多产品...</td>
+          </tr>
+		    
+             <tr> 
+            <td height=20><!--spacer--></td>
+          </tr>
+        </table>
+      </div></td>
+  </tr>
+</table>
+&nbsp; 
+<table cellpadding=0 cellspacing=0 width=158 align=center class="menu">
+  <tr style="cursor:hand;"> 
+    <td height=25 class=menu_title background=xpmenu/title_bg_hide.gif id=menuTitle2 class="menu"> 
+      <span>用户登录</span> </td>
+  </tr>
+
+  <tr> 
+    <td> <div class=sec_menu id=menu2> 
+        <table cellpadding=2 cellspacing=0 align=center width=135 style="position:relative;top:10px;">
+          <tr> 
+            <td> 
+
+<form method="post" action="#">
+  <table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+    <tr> 
+      <td align="center">帐号：<input type="text" name="username" id="formstyle12" size="20">
+        </td>
+    </tr>
+    <tr> 
+      <td align="center">密码：<input type="password" name="Password" id="formstyle12" size="20">
+      </td>
+    </tr>
+    <tr align="center"> 
+      <td colspan="2"> 
+        <input type="submit" name="Submit" id="formstyleall" value="确 定">
+		<input type="hidden" name="comeurl" value="http://www.downcode.com/down/list.asp?id=2435">
+        <input type="reset" name="Submit2" id="formstyleall" value="清 除">
+      </td>
+    </tr>
+  </table>
+      </form>
+
+            </td>
+          </tr>
+
+		  <tr> 
+            <td align="center"><a href="#">没有注册</a> - <a href="#">忘记密码</a>
+			 </td>
+          </tr>
+		  
+          <tr> 
+            <td height=20><!--spacer--></td>
+          </tr>
+        </table>
+      </div></td>
+  </tr>
+</table>
+&nbsp;
+<table cellpadding=0 cellspacing=0 width=158 align=center class="menu">
+  <tr style="cursor:hand;"> 
+    <td height=25 class=menu_title background=xpmenu/title_bg_hide.gif id=menuTitle3 class="menu"> 
+      <span>Instant Messenger</span> </td>
+  </tr>
+  <tr> 
+    <td> <div class=sec_menu id=menu3> 
+        <table cellpadding=0 cellspacing=0 align=center width=135 style="position:relative;top:10px;">
+          <tr> 
+            <td height=20> 
+<img src=xpmenu/mail_send_all.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; <SCRIPT LANGUAGE="JavaScript">
+<!--
+   {browsertest();} 
+//-->
+</SCRIPT>
+			 </td>
+          </tr>
+		  <tr> 
+            <td height=20> 
+<img src=xpmenu/news_catch_up.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; <script>
+if (pluginlist.indexOf("Flash")!=-1)
+document.write("安装了 Flash 插件")
+</script>
+
+			 </td>
+          </tr>
+		  		  <tr> 
+            <td ALIGN="CENTER" height=5> </td>
+          </tr>
+		  <tr> 
+            <td ALIGN="CENTER" height=20><a href="JavaScript:newWindow('im/login_default.asp','popup',310,440,'')"><IMG SRC="XPMENU/OPEN.GIF" BORDER="0"></a>
+
+			 </td>
+          </tr>
+          <tr> 
+            <td height=20><!--spacer--></td>
+          </tr>
+        </table>
+      </div></td>
+  </tr>
+</table>
+&nbsp; 
+<table cellpadding=0 cellspacing=0 width=158 align=center class="menu">
+  <tr style="cursor:hand;"> 
+    <td height=25 class=menu_title background=xpmenu/title_bg_hide.gif id=menuTitle4 class="menu"> 
+      <span>数据统计</span> </td>
+  </tr>
+  <tr> 
+    <td> <div class=sec_menu id=menu4> 
+        <table cellpadding=0 cellspacing=0 align=center width=135 style="position:relative;top:10px;">
+          		  <tr> 
+            <td height=20> 
+<img src=xpmenu/icon_course.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 产品统计：6
+			 </td>
+          </tr>
+		  <tr> 
+            <td height=20> 
+<img src=xpmenu/icon_course.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 案例统计：6
+			 </td>
+          </tr>
+		  <tr> 
+            <td height=20> 
+<img src=xpmenu/icon_course.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 新闻统计：10
+			 </td>
+          </tr>
+		  <tr> 
+            <td height=20> 
+<img src=xpmenu/icon_course.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp;  文章统计：6
+			 </td>
+          </tr>
+
+		  <tr> 
+            <td height=20> 
+<img src=xpmenu/icon_course.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 最新会员：caster
+			 </td>
+          </tr>
+
+<tr> 
+            <td height=20> 
+<img src=xpmenu/favorites.gif align="absmiddle" border="0" width="16" height="16" alt="Click to go there">&nbsp; 详细统计信息...
+			 </td>
+          </tr>
+          <tr> 
+            <td height=20><!--spacer--></td>
+          </tr>
+        </table>
+      </div></td>
+  </tr>
+</table>
+&nbsp; 
+</td></tr></table>
+
+<!--Start XP Style Menu-->
+
+<SCRIPT LANGUAGE="Javascript" DEFER="TRUE"> 
+<!--
+var menuinit=new Array(50),vers;//(don't change this)
+for(i=0;i<51;i++)menuinit[i]=new Array(3);//(don't change this)
+////////////////////////////////////////////////////////////////////////////////////////
+//
+vers="XP Style Menu SP2(V2002.12.10.1452 NEW_CORE_DEV_BETA build 69)";
+//
+//Improved by: swnet(swnet@263.net)
+//Original by: Zhong Zhong
+//
+//Note: best work with MS IE5/6, also looks fine on Netscape/Mozilla but without 
+//      visualized effect.
+//
+//*THIS CODE IS UNDER GUN GPL LICENCE*
+////////////////////////////////////Setting Section////////////////////////////////////
+//
+var onemenu = 0; //open one menu at same time.1 is yes, 0 is no. default=1.
+var speedmout = 100; //menu show speed(1~100;default=50) *the large the fast, but also come with more bump.
+var speedmin = 100; //menu hide speed(1~100;default=50)
+var developversion = true; //when false block all script error if any.
+
+//setting of which menu should be showen. In this example you have 4 menu, which you can switch between "show" and "not show"
+//if you want to add extra one, you should follow this order: "menuinit[n][1]=;" (in [a][b], b must be '1', a is the serial number of menu)
+menuinit[1][1]="show";
+menuinit[2][1]="show";
+menuinit[3][1]="show";
+menuinit[4][1]="show";
+menuinit[5][1]="show";
+menuinit[6][1]="show";
+menuinit[7][1]="show";
+menuinit[8][1]="show";
+
+
+
+////////////////////////!!!DO NOT CHANGE BELOW THIS LINE!!!!/////////////////////////////
+//
+var da=new Date();
+var browser=new BrowserDetectLite();
+var fstrun=1;
+var op="";
+var whichContinue="";
+var whichOpen="";
+var opp=0;
+var opd=0;
+var opc=0;
+var sc=1;sd=1;
+var mnunum=0;
+var cacheObj,cacheMaxh,cacheObj2;
+
+//----------------------------------------------------------------------------------------
+function menuShow(obj,maxh,obj2)
+{
+var da=new Date();
+if(fstrun==1){
+ op="show";
+ mountmfunc(0,0,0);
+ obj2.background="xpmenu/title_bg_hide.gif";
+ obj.style.pixelHeight=2;
+ obj.style.display='block'; 
+ opc=6.18*(speedmout*0.01); //step length
+ opp=Math.round(opc); //rounded step length
+ opd=(maxh/opp)/100; //times
+ sc=1;sd=opd;
+ fstrun=0;
+ cacheObj=obj;cacheMaxh=maxh;cacheObj2=obj2;
+}else{
+ if(op!="show") return false;
+}
+  if(obj.style.pixelHeight<maxh-opp)
+  {
+           if(opd>1){//for slow speed
+              if(sd-sc<1){obj.filters.alpha.opacity+=1;sd+=opd;}
+              sc++;
+            }else{//for fast speed
+              obj.filters.alpha.opacity+=Math.ceil(1/opd);
+            }
+            
+        obj.style.pixelHeight+=opp;
+	cacheObj=obj;cacheMaxh=maxh;cacheObj2=obj2;
+	setTimeout('menuShow(cacheObj,cacheMaxh,cacheObj2)','5');
+  }else{
+        obj.style.pixelHeight=maxh;
+        obj.filters.alpha.opacity=100;
+        fstrun=1;
+        op="";
+        sc=1;sd=1;
+        mountmfunc(1,1,1);
+        return true;
+  }
+
+}
+
+//----------------------------------------------------------------------------------------
+function menuHide(obj,maxh,obj2)
+{
+da=new Date();
+if(fstrun==1){
+ op="hide";
+ mountmfunc(0,0,0);
+ obj2.background="xpmenu/title_bg_show.gif";
+ opc=6.18*(speedmout*0.01); //step length
+ opp=Math.round(opc); 
+ opd=((maxh-3)/opp)/100;
+ sc=1;sd=opd;
+ fstrun=0;
+ cacheObj=obj;cacheMaxh=maxh;cacheObj2=obj2;
+}else{
+ if(op!="hide") return false;
+}
+  if(obj.style.pixelHeight-opp>1)
+  { 
+	    if(opd>1){
+              if(sd-sc<1){obj.filters.alpha.opacity-=1;sd+=opd;}
+              sc++;
+            }else{
+               obj.filters.alpha.opacity-=Math.ceil(1/opd)*0.38;
+            }
+            obj.style.pixelHeight-=opp;
+	setTimeout('menuHide(cacheObj,cacheMaxh,cacheObj2)','5');
+  }else{
+        obj.style.pixelHeight=1;
+        obj.style.display='none';
+        obj.filters.alpha.opacity=0;
+        fstrun=1;
+        op="";
+        sc=1;sd=1;
+        mountmfunc(1,1,1);
+        if(whichContinue && onemenu==1) whichContinue.click();
+        return true;
+  }
+}
+
+//----------------------------------------------------------------------------------------
+function menuChange(obj,maxh,obj2)
+{
+  if(obj.style.pixelHeight>1)
+  {
+    menuHide(obj,maxh,obj2);
+	whichOpen='';       
+  }
+  else
+    if(whichOpen)
+	{
+	  whichContinue=obj2;
+          whichOpen.click();
+	}
+	else
+	{
+	  menuShow(obj,maxh,obj2);
+	  if(onemenu==1)whichOpen=obj2;
+	  whichContinue='';
+	}
+
+}
+
+//----------------------------------------------------------------------------------------
+function mountmfunc(clk,mi,mo){
+//var=1 mount, var=0 disable var=2 do nothing
+//clk=mouse click function
+//mi=mouse over function
+//mo=mouse out function
+if(clk==1){document.onclick=monclick;}else if(clk==0){document.onclick="return false;";}else{}
+if(mi==1){document.onmousemove=monmouseover;}else if(mi==0){document.onmousemove="return false;";}else{}
+if(mo==1){document.onmouseout=monmouseout;}else if(mo==0){document.onmouseout="return false;";}else{}
+
+for(i=1;i<mnunum;i++){
+eval("document.all.menuTitle"+i+".className='menu_title';");
+}
+}
+
+//----------------------------------------------------------------------------------------
+//[Public]
+var regex=new RegExp("menuTitle\d*","i");
+var regex1=new RegExp("[0-9]*$","i");
+var boo=0;
+
+//----------------------------------------------------------------------------------------
+function monmouseover(){
+if(event.srcElement.tagName!="TD" || boo==1) return false;
+if(regex.test(event.srcElement.id)){
+event.srcElement.className="menu_title2";
+boo=1;
+}
+}
+
+//----------------------------------------------------------------------------------------
+function monmouseout(){
+if(event.srcElement.tagName!="TD") return false;
+if(regex.test(event.srcElement.id)){
+event.srcElement.className="menu_title";
+boo=0;
+}
+}
+
+//----------------------------------------------------------------------------------------
+function monclick(){
+if(!browser.isIE5up || browser.isIE55) return true;
+if(event.srcElement.tagName=="A") return true;
+
+if(event.srcElement.tagName=="SPAN"){
+if(regex.test(event.srcElement.parentNode.id)){
+b=event.srcElement.parentNode.id.match(regex1);
+codex="menuChange(menu" + b + "," + eval("menuinit[" + b + "][2]") + "," + event.srcElement.parentNode.id+ ")";
+eval(codex);
+}
+}
+if(regex.test(event.srcElement.id)){
+b=event.srcElement.id.match(regex1);
+codex="menuChange(menu" + b + "," + eval("menuinit[" + b + "][2]") + "," + event.srcElement.id+ ")";
+eval(codex);
+}
+}
+
+//----------------------------------------------------------------------------------------
+function init(){
+if (document.readyState!="complete") return false;
+if(!browser.isIE5up || browser.isIE55) return false;
+if(!developversion)window.onerror = function(){window.onerror = blockError;return true;};
+
+var mccount=0;
+var showornot;
+reg=new RegExp("menu[0-9]{1,2}","i");
+reg1=new RegExp("[0-9]*$","i");
+
+for(i=0;i<document.all.length;i++){
+
+if(reg.test(document.all[i].id)){
+mnunum++;
+
+s=document.all[i].id.match(reg1);
+k=eval("document.all.menu" + s + ".children[0].offsetHeight"); //code to get the height
+eval("menuinit[s][2]=k");
+
+for(n=0;n<document.all[i].childNodes.length;n++){
+if(document.all[i].childNodes.item(n).tagName=="SPAN"){
+//document.all[i].childNodes.item(n).
+}
+}
+
+eval("showornot=menuinit[s][1]");
+
+switch (showornot){
+case "show":
+if(++mccount>1 && onemenu==1)alert("You do not supposed put on 2 active menu while 'onemenu' on. Check your setting or turn 'onemenu' to '0'");
+if(onemenu==1)eval("whichOpen=menuTitle" + s);
+document.all[i].style.filter+="alpha(Opacity=100)";
+document.all[i].style.overflow="hidden";
+document.all[i].style.height=k;
+document.all[i].style.display="block";
+eval('document.all.menuTitle'+mnunum+'.background="xpmenu/title_bg_hide.gif"');
+break;
+case "not show":
+document.all[i].style.filter+="alpha(Opacity=0)";
+document.all[i].style.overflow="hidden";
+document.all[i].style.height="1";
+document.all[i].style.display="none";
+eval('document.all.menuTitle'+mnunum+'.background="xpmenu/title_bg_show.gif"');
+break;
+default: 
+alert("Expect 'show' or 'not show' in setting section!");
+}
+
+}
+}
+}
+
+//----------------------------------------------------------------------------------------
+function xpmenucmd(op,arg1,arg2){
+if (document.readyState!="complete") return false;
+switch(op){
+
+case "null":
+break;
+
+case "show":
+if(arg1!=undefined && arg1>0 && arg1<=mnunum){
+
+if(onemenu){
+for(i=1;i<=mnunum;i++){
+if(i==arg1){
+eval('document.all.menu'+arg1+'.filters.alpha.opacity=100');
+eval('document.all.menu'+arg1+'.style.height="'+menuinit[arg1][2]+'"');
+eval('document.all.menu'+arg1+'.style.display="block"');
+eval('document.all.menuTitle'+arg1+'.background="xpmenu/title_bg_hide.gif"');
+eval('whichOpen=document.all.menuTitle'+arg1);
+}else{
+eval('document.all.menu'+i+'.filters.alpha.opacity=0');
+eval('document.all.menu'+i+'.style.height="1"');
+eval('document.all.menu'+i+'.style.display="none"');
+eval('document.all.menuTitle'+i+'.background="xpmenu/title_bg_show.gif"');
+}
+}
+}else{
+eval('document.all.menu'+arg1+'.filters.alpha.opacity=100');
+eval('document.all.menu'+arg1+'.style.height="'+menuinit[arg1][2]+'"');
+eval('document.all.menu'+arg1+'.style.display="block"');
+eval('document.all.menuTitle'+arg1+'.background="xpmenu/title_bg_hide.gif"');
+}
+
+}
+break;
+
+case "hide":
+if(arg1!=undefined && arg1>0 && arg1<=mnunum){
+
+eval('document.all.menu'+arg1+'.filters.alpha.opacity=0');
+eval('document.all.menu'+arg1+'.style.height="1"');
+eval('document.all.menu'+arg1+'.style.display="none"');
+eval('document.all.menuTitle'+arg1+'.background="xpmenu/title_bg_show.gif"');
+whichContinue='';
+whichOpen='';
+}
+break;
+
+case "set mode":
+ switch(arg1){
+ case "s":
+ onemenu=1;
+ xpmenucmd("hide all");
+ break;
+ case "m":
+ onemenu=0;
+ whichOpen="";
+ break;
+ default:
+ alert("arg1 error!\n\ne.g. xpmenucmd('set mode','[ m | s ]')");
+ return false;
+ }
+return true;
+break;
+
+case "query mode":
+ switch(onemenu){
+ case 1:
+ return "s";
+ break;
+ case 0:
+ return "m"
+ break;
+ default:
+ alert("something was wrong. onemenu must either be 1 or 0!");
+ }
+break;
+
+case "show all":
+if(!onemenu){
+for(i=1;i<=mnunum;i++){
+eval('document.all.menu'+i+'.filters.alpha.opacity=100');
+eval('document.all.menu'+i+'.style.height="'+menuinit[i][2]+'"');
+eval('document.all.menu'+i+'.style.display="block"');
+eval('document.all.menuTitle'+i+'.background="xpmenu/title_bg_hide.gif"');
+}
+whichContinue='';
+whichOpen='';
+
+}else{
+alert("you can only use this command in multi-menu mode!");
+}
+
+break;
+
+case "hide all":
+for(i=1;i<=mnunum;i++){
+eval('document.all.menu'+i+'.filters.alpha.opacity=0');
+eval('document.all.menu'+i+'.style.height="1"');
+eval('document.all.menu'+i+'.style.display="none"');
+eval('document.all.menuTitle'+i+'.background="xpmenu/title_bg_show.gif"');
+}
+whichContinue='';
+whichOpen='';
+
+break;
+
+case "query value":
+return eval(arg1);
+break;
+
+case "exec javascript":
+return eval(arg1);
+break;
+
+case "set value":
+return eval(arg1+"="+arg2);
+break;
+
+case "show version":
+var regex=/\((.*)\)/;
+alert("XP Style Menu\n\n"+regex.exec(vers)[1]);
+break;
+
+default:
+alert("Don't understood your command.\n\ne.g. xpmenucmd('command','arg1','arg2')");
+}
+return true;
+}
+
+//----------------------------------------------------------------------------------------
+
+if(browser.isNS6up || browser.isIE5up){
+mountmfunc(1,1,1);
+}else{
+mountmfunc(1,2,2);
+}
+
+document.onreadystatechange = init; //Let's go!
+
+//That's the end of my code.
+//========================================================================================
+
+//Browser detect script by Chris Nott
+//(NEEDED!DO NOT DEL.)
+function BrowserDetectLite() {
+	var ua = navigator.userAgent.toLowerCase(); 
+
+	// browser name
+	this.isGecko     = (ua.indexOf('gecko') != -1);
+	this.isMozilla   = (this.isGecko && ua.indexOf("gecko/") + 14 == ua.length);
+	this.isNS        = ( (this.isGecko) ? (ua.indexOf('netscape') != -1) : ( (ua.indexOf('mozilla') != -1) && (ua.indexOf('spoofer') == -1) && (ua.indexOf('compatible') == -1) && (ua.indexOf('opera') == -1) && (ua.indexOf('webtv') == -1) && (ua.indexOf('hotjava') == -1) ) );
+	this.isIE        = ( (ua.indexOf("msie") != -1) && (ua.indexOf("opera") == -1) && (ua.indexOf("webtv") == -1) ); 
+	this.isOpera     = (ua.indexOf("opera") != -1); 
+	this.isKonqueror = (ua.indexOf("konqueror") != -1); 
+	this.isIcab      = (ua.indexOf("icab") != -1); 
+	this.isAol       = (ua.indexOf("aol") != -1); 
+	this.isWebtv     = (ua.indexOf("webtv") != -1); 
+	
+	// spoofing and compatible browsers
+	this.isIECompatible = ( (ua.indexOf("msie") != -1) && !this.isIE);
+	this.isNSCompatible = ( (ua.indexOf("mozilla") != -1) && !this.isNS && !this.isMozilla);
+	
+	// browser version
+	this.versionMinor = parseFloat(navigator.appVersion); 
+	
+	// correct version number
+	if (this.isNS && this.isGecko) {
+		this.versionMinor = parseFloat( ua.substring( ua.lastIndexOf('/') + 1 ) );
+	}
+	else if (this.isIE && this.versionMinor >= 4) {
+		this.versionMinor = parseFloat( ua.substring( ua.indexOf('msie ') + 5 ) );
+	}
+	else if (this.isOpera) {
+		if (ua.indexOf('opera/') != -1) {
+			this.versionMinor = parseFloat( ua.substring( ua.indexOf('opera/') + 6 ) );
+		}
+		else {
+			this.versionMinor = parseFloat( ua.substring( ua.indexOf('opera ') + 6 ) );
+		}
+	}
+	else if (this.isKonqueror) {
+		this.versionMinor = parseFloat( ua.substring( ua.indexOf('konqueror/') + 10 ) );
+	}
+	else if (this.isIcab) {
+		if (ua.indexOf('icab/') != -1) {
+			this.versionMinor = parseFloat( ua.substring( ua.indexOf('icab/') + 6 ) );
+		}
+		else {
+			this.versionMinor = parseFloat( ua.substring( ua.indexOf('icab ') + 6 ) );
+		}
+	}
+	else if (this.isWebtv) {
+		this.versionMinor = parseFloat( ua.substring( ua.indexOf('webtv/') + 6 ) );
+	}
+	
+	this.versionMajor = parseInt(this.versionMinor); 
+	this.geckoVersion = ( (this.isGecko) ? ua.substring( (ua.lastIndexOf('gecko/') + 6), (ua.lastIndexOf('gecko/') + 14) ) : -1 );
+	
+	// dom support
+   this.isDOM1 = (document.getElementById);
+	this.isDOM2Event = (document.addEventListener && document.removeEventListener);
+   
+   // css compatibility mode
+   this.mode = document.compatMode ? document.compatMode : 'BackCompat';
+
+	// platform
+	this.isWin   = (ua.indexOf('win') != -1);
+	this.isWin32 = (this.isWin && ( ua.indexOf('95') != -1 || ua.indexOf('98') != -1 || ua.indexOf('nt') != -1 || ua.indexOf('win32') != -1 || ua.indexOf('32bit') != -1) );
+	this.isMac   = (ua.indexOf('mac') != -1);
+	this.isUnix  = (ua.indexOf('unix') != -1 || ua.indexOf('linux') != -1 || ua.indexOf('sunos') != -1 || ua.indexOf('bsd') != -1 || ua.indexOf('x11') != -1)
+	
+	// specific browser shortcuts
+	this.isNS4x = (this.isNS && this.versionMajor == 4);
+	this.isNS40x = (this.isNS4x && this.versionMinor < 4.5);
+	this.isNS47x = (this.isNS4x && this.versionMinor >= 4.7);
+	this.isNS4up = (this.isNS && this.versionMinor >= 4);
+	this.isNS6x = (this.isNS && this.versionMajor == 6);
+	this.isNS6up = (this.isNS && this.versionMajor >= 6);
+	
+	this.isIE4x = (this.isIE && this.versionMajor == 4);
+	this.isIE4up = (this.isIE && this.versionMajor >= 4);
+	this.isIE5x = (this.isIE && this.versionMajor == 5);
+	this.isIE55 = (this.isIE && this.versionMinor == 5.5);
+	this.isIE5up = (this.isIE && this.versionMajor >= 5);
+	this.isIE6x = (this.isIE && this.versionMajor == 6);
+	this.isIE6up = (this.isIE && this.versionMajor >= 6);
+	
+	this.isIE4xMac = (this.isIE4x && this.isMac);
+}
+//
+-->
+</SCRIPT>
+<!--End XP Style Menu-->
+
+
+</div>
+				  </td>
+                </tr>
+              </table>
+            </td>
+			<!-- Main-Block -->
+<td width="100%">
+            <table width="100%" cellpadding=2 cellspacing=1 border=0 align="center">
+                <tr> 
+                  <td> 
+                    
+                  <div align="center"> 
+				  
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<body  onLoad="MM_preloadImages('images/pro_1_on.gif','images/pro_2_on.gif','images/pro_3_on.gif','images/pro_4_on.gif')">
+
+<TABLE width="100%" cellPadding="2" cellSpacing="0">
+<TBODY>
+<TR>
+<TD width="100%" class="uptitle">
+<B>Welcome to Company Name</b>
+</td>
+</tr>
+<TR>
+<td width="100%"></td>
+</tr>
+</TBODY>
+</table>
+<table width="100%" bgcolor="#bbbbbb" border="0" cellspacing="1" align="center" cellpadding="4">
+<tr> 
+    <td class="chinese" bgcolor="#FFFFFF" align="right"> 
+      <table width="100%" border="0" cellpadding="5" cellspacing="0" align="center">
+	  <TR>
+	  <TD colspan="2">
+	  A digital dashboard is a user-configurable Web page that functions as an 
+      information portal. A digital dashboard consolidates personal, team, 
+      corporate,
+	  </TD>
+	  </TR>
+	  <TR>
+	  <TD colspan="2" HEIGHT="1" background="images/dg.gif">
+	  </TD>
+	  </TR>
+        <tr> 
+          <td width="50%">
+<a href="#" onMouseOver="MM_swapImage('Image1','','images/pro_1_on.gif',1)" onMouseOut="MM_swapImgRestore()">
+<img src="images/pro_1_off.gif" name="Image1" border="0" id="Image1" width="225" height="31"></a>
+          </td>
+		  <td width="50%">
+		  <a href="#" onMouseOver="MM_swapImage('Image2','','images/pro_2_on.gif',1)" onMouseOut="MM_swapImgRestore()">
+          <img src="images/pro_2_off.gif" name="Image2" border="0" id="Image2" width="225" height="31"></a>
+		  </td>
+		</tr>
+        <tr> 
+          <td width="50%">
+<a href="#" onMouseOver="MM_swapImage('Image3','','images/pro_3_on.gif',1)" onMouseOut="MM_swapImgRestore()">
+<img src="images/pro_3_off.gif" name="Image3" border="0" id="Image3" width="225" height="31"></a>
+</td>
+		  <td width="50%">
+<a href="#" onMouseOver="MM_swapImage('Image4','','images/pro_4_on.gif',1)" onMouseOut="MM_swapImgRestore()">
+<img src="images/pro_4_off.gif" name="Image4" border="0" id="Image4" width="225" height="31"></a>
+		  </td>
+        </tr>
+		<TR>
+	  <TD colspan="2" HEIGHT="1" background="images/dg.gif">
+	  </TD>
+	  </TR>
+	  <TR>
+	  <TD colspan="2">
+	  A digital dashboard is a user-configurable Web page that functions as an 
+      information portal. A digital dashboard consolidates personal, team, 
+      corporate,
+	  </TD>
+	  </TR>
+      </table>
+	 </td>
+  </tr>
+</table>
+
+<br>
+<!--# NEWS --> 
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF">
+  	  
+  <tr> 
+    <td width="100%" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+        <tr> 
+          <td width="4%" align="center" class="uptitle">
+          <img src="images/filenew.gif" width="14" height="16"></td><td valign="bottom" align="left" class="uptitle">
+          <b>Company page header</b></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="1" cellpadding="3" align="center" bgcolor="#bbbbbb">
+        <tr> 
+          <td bgcolor="#FFFfFf" align="left">
+            A digital dashboard is a user-configurable Web page that functions 
+            as an information portal. A digital dashboard consolidates personal, 
+            team, corporate,
+          </td>
+		</tr>
+		<tr> 
+          <td align="center" bgcolor="#FFFfFf">(发布者：username | 时间：2003-7-17 9:23:09 | 详细内容...)
+</td>
+		</tr>
+      </table><br>
+  
+  <tr> 
+    <td width="100%" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+        <tr> 
+          <td width="4%" align="center" class="uptitle">
+          <img src="images/filenew.gif" width="14" height="16"></td><td valign="bottom" align="left" class="uptitle">
+          <b>Company page header</b></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="1" cellpadding="3" align="center" bgcolor="#bbbbbb">
+        <tr> 
+          <td bgcolor="#FFFfFf" align="left">
+            A digital dashboard is a user-configurable Web page that functions 
+            as an information portal. A digital dashboard consolidates personal, 
+            team, corporate, <br>
+            A digital dashboard is a user-configurable Web page that functions 
+            as an information portal. A digital dashboard consolidates personal, 
+            team, corporate,
+          </td>
+		</tr>
+		<tr> 
+          <td align="center" bgcolor="#FFFfFf">(发布者：username | 时间：2003-7-5 11:57:49 | 详细内容...)
+</td>
+		</tr>
+      </table><br>
+  
+  <tr> 
+    <td width="100%" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+        <tr> 
+          <td width="4%" align="center" class="uptitle">
+          <img src="images/filenew.gif" width="14" height="16"></td><td valign="bottom" align="left" class="uptitle">
+          <b>Company page header</b></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="1" cellpadding="3" align="center" bgcolor="#bbbbbb">
+        <tr> 
+          <td bgcolor="#FFFfFf" align="left">
+            A digital dashboard is a user-configurable Web page that functions 
+            as an information portal. A digital dashboard consolidates personal, 
+            team, corporate, <br>
+            A digital dashboard is a user-configurable Web page that functions 
+            as an information portal. A digital dashboard consolidates personal, 
+            team, corporate,
+          </td>
+		</tr>
+		<tr> 
+          <td align="center" bgcolor="#FFFfFf">(发布者：username | 时间：2003-7-1 18:30:42 | 详细内容...)
+</td>
+		</tr>
+      </table><br>
+  
+  <tr> 
+    <td width="100%" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+        <tr> 
+          <td width="4%" align="center" class="uptitle">
+          <img src="images/filenew.gif" width="14" height="16"></td><td valign="bottom" align="left" class="uptitle">
+          <b>Company page header</b></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="1" cellpadding="3" align="center" bgcolor="#bbbbbb">
+        <tr> 
+          <td bgcolor="#FFFfFf" align="left">
+            A digital dashboard is a user-configurable Web page that functions 
+            as an information portal. A digital dashboard consolidates personal, 
+            team, corporate, <br>
+            A digital dashboard is a user-configurable Web page that functions 
+            as an information portal. A digital dashboard consolidates personal, 
+            team, corporate,
+          </td>
+		</tr>
+		<tr> 
+          <td align="center" bgcolor="#FFFfFf">(发布者：username | 时间：2003-6-26 3:48:48 | 详细内容...)
+</td>
+		</tr>
+      </table><br>
+  
+  <tr> 
+    <td width="100%" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+        <tr> 
+          <td width="4%" align="center" class="uptitle">
+          <img src="images/filenew.gif" width="14" height="16"></td><td valign="bottom" align="left" class="uptitle">
+          <b>Company page header</b></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="1" cellpadding="3" align="center" bgcolor="#bbbbbb">
+        <tr> 
+          <td bgcolor="#FFFfFf" align="left">
+            A digital dashboard is a user-configurable Web page that functions 
+            as an information portal. A digital dashboard consolidates personal, 
+            team, corporate, <br>
+            A digital dashboard is a user-configurable Web page that functions 
+            as an information portal. A digital dashboard consolidates personal, 
+            team, corporate,
+          </td>
+		</tr>
+		<tr> 
+          <td align="center" bgcolor="#FFFfFf">(发布者：username | 时间：2003-6-26 2:48:01 | 详细内容...)
+</td>
+		</tr>
+      </table><br>
+  
+    </td>
+
+  </tr>
+
+</table>
+<table><tr><td align="center">[ <A href="modules.asp?name=News">News Archive...</a> ]</td></tr></table>
+
+ 
+<!--# END NEWS -->
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+			<!-- Right-Block -->
+			
+          </tr>
+
+        </table>
+  <!--
+=========================================================================
+|| # IDTEAM 2.0 Beta 2
+-------------------------------------------------------------------------
+|| # All ASP code in this file is 2002-2003 Ideal Development Team.
+|| # This file may not be redistributed in whole or significant part.
+|| # ---------------- ASPNUKE IS NOT FREE SOFTWARE ----------------
+|| # You can visit our official site http://www.idteam.co.nr
+=========================================================================
+-->
+
+<table border="0" cellpadding="0" cellspacing="0" width="750" align="center">
+  <tbody> 
+  <tr> 
+    <td height="23" width="34"><a href="#top"><img src="images/bottom_top.gif" width="34" height="46" alt="top" border="0"></a></td>
+    <td align="middle" class="right_text" height="23" 
+      width="316" background="images/bottom_bg.gif"> 
+      <div align="right"><img src="images/bottom_bg.gif" width="4" height="46"></div>
+    </td>
+    <td align="middle" class="right_text" height="23" 
+      width="400" background="images/bottom_bg.gif"> 
+      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1" height="46">
+        <tr>
+          <td width="100%" height="13" align="right"><font color="#FFFFFF">2003 
+          (C) Copyright your company, All right reserved</font></td>
+        </tr>
+        <tr>
+          <td width="100%" height="20" align="right">Power By
+          <a href="http://www.WRclub.net">www.WRclub.net</a>&nbsp; </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  </tbody> 
+</table>
+
+   </td>
+    </tr>
+  </table>
+</html>
+<span style="display:none;">这个模版来自http://BestMoban.Com,更多模版请访问<a href="http://BestMoban.Com">http://BestMoban.Com</a>&nbsp;<a href="http://Moban.17Easy.Com">http://Moban.17Easy.Com</a></span>
