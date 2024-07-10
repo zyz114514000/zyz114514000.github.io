@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <style>
         body {
@@ -53,9 +55,38 @@
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
         }
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .light-theme {
+            background-color: #f0f0f0;
+            color: #000;
+        }
+        .light-theme .music-player {
+            background-color: #fff;
+            color: #000;
+        }
+        .light-theme .music-player p {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .light-theme .theme-toggle {
+            background-color: #000;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
+    <button class="theme-toggle">切换主题</button>
     <div class="container">
         <div class="music-player">
             <img src="music-cover.jpg" alt="Music Cover">
@@ -71,5 +102,11 @@
             </p>
         </div>
     </div>
+    <script>
+        const toggleButton = document.querySelector('.theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
 </body>
 </html>
