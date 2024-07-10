@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Player</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .music-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .music-player img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .music-player h2 {
+            margin: 0;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .music-player audio {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .music-player p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <img src="music-cover.jpg" alt="Music Cover">
+            <h2>遇见你</h2>
+            <audio controls>
+                <source src="10001.mp3" type="audio/mpeg">
+            </audio>
+            <p>
+                [00:00] Lyrics line 1<br>
+                [00:05] Lyrics line 2<br>
+                [00:10] Lyrics line 3<br>
+                [00:15] Lyrics line 4<br>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
